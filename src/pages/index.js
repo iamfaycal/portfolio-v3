@@ -11,9 +11,8 @@ import Contact from "../components/Contact/Contact";
 
 import Prismic from "prismic-javascript";
 
-const apiEndpoint = "https://faycalhammoudiapi.cdn.prismic.io/api/v2";
-const accessToken =
-    "MC5YdGFTWkJJQUFDRUFNc3hW.77-9BRTvv73vv71C77-977-977-977-977-9L3Tvv71677-9Ge-_ve-_ve-_vU4tau-_vVnvv73vv73vv73vv73vv71QBw";
+const apiEndpoint = process.env.GATSBY_API_URL;
+const accessToken = process.env.GATSBY_ACCESS_TOKEN;
 
 const Client = Prismic.client(apiEndpoint, { accessToken });
 
