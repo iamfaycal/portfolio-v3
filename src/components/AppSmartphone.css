@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:700|Source+Sans+Pro:700&display=swap");
+
+/* RESET CSS */
+* {
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background: #151515;
+    color: #ddd;
+}
+body.modal-open {
+    overflow: hidden;
+    height: 100%;
+}
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 0 50px;
+}
+section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+/* FONTS */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 700;
+    margin: 0;
+}
+p {
+    margin-top: 0;
+}
+.SourceSansPro {
+    font-family: "Source Sans Pro", sans-serif;
+}
+.Lato {
+    font-family: "Lato", sans-serif;
+}
+.sectionTitle {
+    font-size: 50px;
+    line-height: 55px;
+    margin-bottom: 40px;
+}
+
+/* LINKS */
+a {
+    font-family: "Source Sans Pro", sans-serif;
+    text-decoration: none;
+    color: #ddd;
+}
+.underlineLink {
+    padding-bottom: 15px;
+    border-bottom: 4px solid #ddd;
+    font-size: 20px;
+}
+
+/* TRANSITION GROUP FADE */
+.fade-enter {
+    opacity: 0;
+    grid-area: main;
+}
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 0.5s ease 0.5s;
+}
+.fade-exit {
+    opacity: 1;
+    grid-area: main;
+}
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* COOKIES BANNER */
+.consent-ui--banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #111;
+    padding: 25px 20px;
+}
+.consent-ui--banner-text {
+    margin-bottom: 15px;
+    padding-right: 60px;
+}
+.consent-ui--details-background {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000;
+    opacity: 0.7;
+}
+.consent-ui--details-modal {
+    position: fixed;
+    top: 120px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-color: #111;
+    overflow: auto;
+}
+.consent-ui--details-text {
+    padding: 20px 20px 15px;
+}
+.consent-ui--details-text h2 {
+    margin-bottom: 15px;
+    padding-right: 40px;
+}
+.consent-ui--banner-text {
+    text-align: justify;
+}
+.consent-ui--banner-actions,
+.consent-ui--item-choices {
+    display: flex;
+    align-items: center;
+}
+.consent-ui--banner-actions button,
+.consent-ui--item-choices button {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 15px;
+    padding: 0;
+    padding-bottom: 10px;
+    margin-right: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #ddd;
+    cursor: pointer;
+}
+button.consent-ui--close {
+    margin-left: auto;
+    margin-right: 0;
+    border: none;
+    font-size: 50px;
+    line-height: 30px;
+    padding-bottom: 5px;
+    background-color: transparent;
+    color: #ddd;
+    cursor: pointer;
+}
+.consent-ui--item {
+    margin-bottom: 15px;
+}
+.consent-ui--details-all {
+    text-align: center;
+    padding: 0 20px 10px;
+}
+.consent-ui--details-all .consent-ui--item-choices {
+    justify-content: center;
+}
+.consent-ui--details-items {
+    background-color: #333;
+    padding: 15px 20px;
+}
+.consent-ui--item-label {
+    margin-bottom: 5px;
+}
+.consent-ui--item-label a {
+    display: inline-block;
+}
+.consent-ui--details-modal .consent-ui--close {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+}

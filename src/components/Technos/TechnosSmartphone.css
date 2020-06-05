@@ -1,0 +1,26 @@
+/* ABOUT STYLE */
+#technos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.technos__text {
+    font-size: 22px;
+    line-height: 30px;
+}
+.technos__list {
+    column-gap: 100px;
+    padding-left: 22.5px;
+}
+.technos__list li {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+.technos__list li img {
+    width: 40px;
+    color: white;
+    fill: white;
+    margin-right: 20px;
+}

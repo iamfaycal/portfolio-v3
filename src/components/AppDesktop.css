@@ -1,0 +1,43 @@
+@media screen and (min-width: 960px) {
+    #wrapper {
+        padding: 0 80px;
+    }
+    section {
+        width: 75%;
+    }
+    .sectionTitle {
+        font-size: 100px;
+        line-height: 100px;
+        margin-bottom: 40px;
+    }
+    /* LINKS */
+    .underlineLink {
+        font-size: 25px;
+    }
+    /* COOKIE BANNER */
+    .consent-ui--banner {
+        padding: 20px 200px;
+    }
+    .consent-ui--banner .consent-ui--close {
+        position: absolute;
+        top: 15px;
+        right: 200px;
+    }
+    .consent-ui--details-modal {
+        top: 50%;
+        transform: translateY(-50%);
+        bottom: auto;
+        max-width: 640px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+    }
+    .consent-ui--details-text {
+        padding: 50px 30px 20px;
+    }
+    .consent-ui--details-modal .consent-ui--close {
+        top: 45px;
+    }
+    .consent-ui--details-items {
+        padding: 20px 30px 15px;
+    }
+}

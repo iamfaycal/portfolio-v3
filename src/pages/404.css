@@ -1,0 +1,12 @@
+#page404 {
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+}
+#page404 h1 {
+    font-size: 60px;
+}
+#page404 p {
+    font-size: 25px;
+    text-align: center;
+}

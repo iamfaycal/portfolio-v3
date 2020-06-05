@@ -1,0 +1,15 @@
+/* ABOUT STYLE */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+.about__text {
+    font-size: 22px;
+    line-height: 30px;
+}
+.underlineLink {
+    margin-bottom: 50px;
+}
