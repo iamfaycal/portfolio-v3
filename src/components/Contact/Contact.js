@@ -87,7 +87,7 @@ const Contact = () => {
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" name="contact" method="POST" data-netlify="true" action="/">
+            <form className="contactForm" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/">
                 <input type="hidden" name="form-name" value="contact" />
                 <input
                     className="contactForm__input SourceSansPro"
@@ -128,6 +128,7 @@ const Contact = () => {
                         seront vendus où cédées (c'est promis).
                     </label>
                 </div>
+                <div data-netlify-recaptcha="true"></div>
                 <div className="contactForm_submitGroup">
                     <input
                         className="contactForm__submit SourceSansPro"
