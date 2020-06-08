@@ -87,9 +87,9 @@ const Contact = () => {
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/">
+            <form className="contactForm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
                 <input type="hidden" name="form-name" value="contact" />
-                <label style="display: none;">Don’t fill this out if you're human: <input name="bot-field" /></label>
+                <label style={{display: none}}>Don’t fill this out if you're human: <input name="bot-field" /></label>
                 <input
                     className="contactForm__input SourceSansPro"
                     type="text"
