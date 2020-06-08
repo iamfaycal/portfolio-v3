@@ -87,8 +87,9 @@ const Contact = () => {
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true" action="/">
+            <form className="contactForm" name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true" action="/">
                 <input type="hidden" name="form-name" value="contact" />
+                <label style="display: none;">Don’t fill this out if you're human: <input name="bot-field" /></label>
                 <input
                     className="contactForm__input SourceSansPro"
                     type="text"
@@ -128,7 +129,6 @@ const Contact = () => {
                         seront vendus où cédées (c'est promis).
                     </label>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
                 <div className="contactForm_submitGroup">
                     <input
                         className="contactForm__submit SourceSansPro"
