@@ -1,5 +1,4 @@
 import React from "react";
-import { Helmet } from "react-helmet";
 
 import Layout from "../components/layout";
 import SEO from "../components/seo";
@@ -21,36 +20,6 @@ const IndexPage = () => {
     return (
         <Layout>
             <SEO />
-            <Helmet>
-                <script>{`                    
-                    const transValues = {
-                        x: 0,
-                        y: 0,
-                    };
-
-                    let vw = Math.max(
-                        document.documentElement.clientWidth,
-                        window.innerWidth || 0
-                    );
-                    let vh = Math.max(
-                        document.documentElement.clientHeight,
-                        window.innerHeight || 0
-                    );
-
-                    const handleMouseMove = e => {
-                        let transValues.x = (e.nativeEvent.clientX - vw / 2) / 10;
-                        let transValues.x = (e.nativeEvent.clientY - vh / 2) / 10;
-                        //console.log("onMouseMove", transX, transY);
-                    };
-
-                    document.querySelector(".home__hugeText").style.transform =
-                        "translate(calc(-50% + " +
-                        transValues.x +
-                        "px), calc(-50% + " +
-                        transValues.y +
-                        "px))";
-                `}</script>
-            </Helmet>
             <div className="components">
                 <Home />
                 <About />

@@ -7,7 +7,7 @@ import Footer from "./Footer/Footer";
 import "./AppSmartphone.css";
 import "./AppDesktop.css";
 
-const Layout = ({ children, onMouseMove }) => {
+const Layout = ({ children }) => {
     const [menuVisible, setMenuVisible] = useState(false);
 
     return (
