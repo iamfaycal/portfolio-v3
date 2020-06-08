@@ -70,6 +70,7 @@ const Contact = () => {
         }, 5000);
     };*/
 
+    const recaptchaRef = React.createRef()
     const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY;
     if (typeof RECAPTCHA_KEY === 'undefined') {
         throw new Error(`
