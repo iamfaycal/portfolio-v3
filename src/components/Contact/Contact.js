@@ -37,7 +37,7 @@ const Contact = () => {
         });
     };
 
-    const onSubmit = e => {
+    /*const onSubmit = e => {
         e.preventDefault();
         recaptchaRef.current.reset();
 
@@ -76,12 +76,12 @@ const Contact = () => {
                 .classList.remove("contactForm__alert--" + type);
             document.querySelector(".contactForm__alert").innerHTML = "";
         }, 5000);
-    };
+    };*/
 
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" onSubmit={onSubmit}>
+            <form className="contactForm" method="POST" data-netlify="true">
                 <input
                     className="contactForm__input SourceSansPro"
                     type="text"

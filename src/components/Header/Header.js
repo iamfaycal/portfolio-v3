@@ -29,7 +29,7 @@ const Header = ({ setMenuVisible, menuVisible }) => {
                     <h1 className="brand__text">FH</h1>
                 </Link>
             </div>
-            <div className="menuButton" onClick={() => onClick()}>
+            <div className="menuButton" role="button" tabIndex={0} onKeyPress={e => e.code === "Enter" && onClick()} onClick={() => onClick()}>
                 <div className="menuButton__bar1"></div>
                 <div className="menuButton__bar2"></div>
                 <div className="menuButton__bar3"></div>

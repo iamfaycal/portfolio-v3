@@ -49,6 +49,7 @@ const Menu = ({ setMenuVisible }) => {
                     className="mainNavigation__item"
                     href="https://42-tech.com"
                     target="_blank"
+                    rel="noreferrer"
                     onClick={e => navItemClicked(e)}
                 >
                     blog

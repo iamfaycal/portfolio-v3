@@ -3,8 +3,6 @@ import React, { useState, useEffect } from "react";
 import "./WorkSmartphone.css";
 import "./WorkDesktop.css";
 
-import { Link } from "gatsby";
-
 import Prismic from "prismic-javascript";
 
 const Work = ({ Client }) => {
@@ -15,11 +13,10 @@ const Work = ({ Client }) => {
             const res = await Client.query(
                 Prismic.Predicates.at("document.type", "projects")
             );
-            console.log(res.results[0].data.project_url.url);
             setProjects(res.results);
         };
         fetchData();
-    }, []);
+    }, [Client]);
 
     return (
         <section id="work">

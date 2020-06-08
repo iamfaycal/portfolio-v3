@@ -10,10 +10,10 @@ const About = () => {
             <p className="about__text">
                 Je suis Fayçal, développeur web frontend. Je suis passioné par
                 l'informatique et le code depuis plus de 10 ans. Je créé des
-                applications frontend et serveless ultra-rapides avec React.js.
+                applications frontend ultra-rapides avec React.js.
                 J'apporte un maximum de valeur ajoutée sur vos projets en
                 accordant une attention particulière à la qualité du code que j'écrit
-                et en suivant les bonnes pratiques du métier.
+                et en suivant les bonnes pratiques des outils que j'utilise.
             </p>
         </section>
     );

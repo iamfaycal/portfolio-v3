@@ -18,7 +18,7 @@ const Layout = ({ children, onMouseMove }) => {
                     menuVisible={menuVisible}
                 />
                 {menuVisible && <Menu setMenuVisible={setMenuVisible} />}
-                <main role="main" onMouseMove={onMouseMove}>
+                <main role="main">
                     {children}
                 </main>
                 <Footer />

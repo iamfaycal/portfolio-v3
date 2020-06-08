@@ -1,22 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import "./HomeSmartphone.css";
 import "./HomeDesktop.css";
 
 import Faycal from "../../assets/faycal.svg";
 
-const Home = ({ transValues }) => {
-    //console.log(transValues);
-    useEffect(() => {
-        //console.log(document.querySelector(".home__hugeText"));
-        document.querySelector(".home__hugeText").style.transform =
-            "translate(calc(-50% + " +
-            transValues.x +
-            "px), calc(-50% + " +
-            transValues.y +
-            "px))";
-    }, [transValues.x, transValues.y]);
-
+const Home = () => {
     return (
         <section id="home">
             <h2 className="home__title">
