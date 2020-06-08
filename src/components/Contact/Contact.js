@@ -73,22 +73,26 @@ const Contact = () => {
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
             <form className="contactForm" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+                <input type="hidden" name="form-name" value="contact" />
                 <input
                     className="contactForm__input SourceSansPro"
                     type="text"
                     name="senderName"
                     placeholder="votre nom & prenom"
+                    required
                 />
                 <input
                     className="contactForm__input SourceSansPro"
                     type="email"
                     name="senderEmail"
                     placeholder="votre adresse email"
+                    required
                 />
                 <textarea
                     className="contactForm__textarea SourceSansPro"
                     name="message"
                     placeholder="votre message"
+                    required
                 ></textarea>
                 <div className="contactForm__consent">
                     <input
@@ -96,6 +100,7 @@ const Contact = () => {
                         type="checkbox"
                         name="dataConsent"
                         id="dataConsent"
+                        required
                     />
                     <span className="contactForm__consentCheckbox"></span>
                     <label
