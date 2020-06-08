@@ -1,18 +1,16 @@
-import React, { useState } from "react";
-import ReCAPTCHA from "react-google-recaptcha";
+import React from "react";
 
 import "./ContactSmartphone.css";
 import "./ContactDesktop.css";
 
 const Contact = () => {
-    const recaptchaRef = React.createRef();
+    /*const recaptchaRef = React.createRef();
 
     const initialState = {
-        name: "",
-        email: "",
+        senderName: "",
+        senderEmail: "",
         message: "",
-        dataConsent: false,
-        recaptcha: ""
+        dataConsent: false
     };
     const [formData, setFormData] = useState(initialState);
 
@@ -28,14 +26,7 @@ const Contact = () => {
             ...formData,
             dataConsent: e.target.checked
         });
-    };
-
-    const onCaptchaUpdate = val => {
-        setFormData({
-            ...formData,
-            recaptcha: val
-        });
-    };
+    };*/
 
     /*const onSubmit = e => {
         e.preventDefault();
@@ -81,29 +72,23 @@ const Contact = () => {
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" method="POST" data-netlify="true">
+            <form className="contactForm" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
                 <input
                     className="contactForm__input SourceSansPro"
                     type="text"
-                    name="name"
+                    name="senderName"
                     placeholder="votre nom & prenom"
-                    onChange={e => onUpdate(e)}
-                    value={formData.name}
                 />
                 <input
                     className="contactForm__input SourceSansPro"
                     type="email"
-                    name="email"
+                    name="senderEmail"
                     placeholder="votre adresse email"
-                    onChange={e => onUpdate(e)}
-                    value={formData.email}
                 />
                 <textarea
                     className="contactForm__textarea SourceSansPro"
                     name="message"
                     placeholder="votre message"
-                    onChange={e => onUpdate(e)}
-                    value={formData.message}
                 ></textarea>
                 <div className="contactForm__consent">
                     <input
@@ -111,8 +96,6 @@ const Contact = () => {
                         type="checkbox"
                         name="dataConsent"
                         id="dataConsent"
-                        onChange={e => onConsent(e)}
-                        checked={formData.dataConsent}
                     />
                     <span className="contactForm__consentCheckbox"></span>
                     <label
@@ -125,14 +108,7 @@ const Contact = () => {
                         seront vendus où cédées (c'est promis).
                     </label>
                 </div>
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    className="contactForm__reCaptcha"
-                    sitekey="6Lc7WBIUAAAAAOmttgxELEfmxOaXgXd-MdGrqVSa"
-                    theme="dark"
-                    onChange={onCaptchaUpdate}
-                    size="normal"
-                />
+                <div data-netlify-recaptcha="true"></div>
                 <div className="contactForm_submitGroup">
                     <input
                         className="contactForm__submit SourceSansPro"
