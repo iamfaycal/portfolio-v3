@@ -1,4 +1,5 @@
 import React from "react";
+import Recaptcha from 'react-google-recaptcha'
 
 import "./ContactSmartphone.css";
 import "./ContactDesktop.css";
@@ -69,6 +70,16 @@ const Contact = () => {
         }, 5000);
     };*/
 
+    const RECAPTCHA_KEY = process.env.GATSBY_APP_SITE_RECAPTCHA_KEY;
+    if (typeof RECAPTCHA_KEY === 'undefined') {
+        throw new Error(`
+        Env var GATSBY_APP_SITE_RECAPTCHA_KEY is undefined! 
+        You probably forget to set it in your Netlify build environment variables. 
+        Make sure to get a Recaptcha key at https://www.netlify.com/docs/form-handling/#custom-recaptcha-2-with-your-own-settings
+        Note this demo is specifically for Recaptcha v2
+        `)
+    }
+
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
@@ -113,7 +124,7 @@ const Contact = () => {
                         seront vendus où cédées (c'est promis).
                     </label>
                 </div>
-                <div data-netlify-recaptcha="true"></div>
+                <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
                 <div className="contactForm_submitGroup">
                     <input
                         className="contactForm__submit SourceSansPro"
