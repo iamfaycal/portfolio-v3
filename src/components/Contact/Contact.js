@@ -81,10 +81,13 @@ const Contact = () => {
         `)
     }
 
+    
+                /*<Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />*/
+
     return (
         <section id="contact">
             <h2 className="sectionTitle">restons en contact</h2>
-            <form className="contactForm" name="contact" method="POST" data-netlify-recaptcha="true" data-netlify="true">
+            <form className="contactForm" name="contact" method="POST" data-netlify="true" action="/">
                 <input type="hidden" name="form-name" value="contact" />
                 <input
                     className="contactForm__input SourceSansPro"
@@ -125,7 +128,6 @@ const Contact = () => {
                         seront vendus où cédées (c'est promis).
                     </label>
                 </div>
-                <Recaptcha ref={recaptchaRef} sitekey={RECAPTCHA_KEY} />
                 <div className="contactForm_submitGroup">
                     <input
                         className="contactForm__submit SourceSansPro"
